@@ -1,0 +1,80 @@
+functions in the model.php :
+
+    Basic crud examples:
+
+        CREATE: 
+            $candidate = new Candidate();
+            $candidate->insert([
+                'user_id'              => 5,
+                'firstName'            => 'John',
+                'lastName'             => 'Doe',
+                'DOB'                  => '1998-04-15',
+                'address'              => '123 Main St',
+                'contactNo'            => '0771234567',
+                'candidate_photo_path' => 'assets/uploads/john.jpg'
+            ]);
+
+        READ:
+            Get all records (uses default limit/offset)
+
+                $candidate = new Candidate;
+                $candidate_info = $candidate->SelectAll();
+
+            Get with conditions
+
+                $results = $candidate->where(
+                    ['firstName' => 'John'],   // WHERE firstName = 'John'
+                    ['status'    => 'pending'] // AND status != 'pending'
+                );
+
+            Get single record
+
+                $result = $candidate->first(['user_id' => 5]);
+
+        UPDATE:
+            Update by user_id
+
+                $candidate = new Candidate;
+                $candidate->update(5, ['firstName' => 'Jane','contactNo' => '0779876543'], 'user_id');
+
+        DELETE:
+
+            $candidate = new Candidate;
+            $candidate->delete(5, 'user_id');
+
+
+
+
+How the first() function works:
+
+    $user = new User();
+
+    1. Find a user by email
+
+    $user->first(['email' => 'john@gmail.com']);
+    equal to: 
+    SELECT * FROM users WHERE email = ? LIMIT 10 OFFSET 0
+
+    2. Find an active candidate
+
+    $user->first(['user_id' => 5, 'status' => 'active']);
+    equal to: 
+    SELECT * FROM users WHERE user_id = ? AND status = ? LIMIT 10 OFFSET 0
+
+    3. Find a user that is NOT pending
+
+    $user->first([], ['status' => 'pending']);
+    equal to: 
+    SELECT * FROM users WHERE status != ? LIMIT 10 OFFSET 0
+
+    4. Find active user who is NOT a candidate
+
+    $user->first(['status' => 'active'], ['role' => 'candidate']);
+    equal to: 
+    SELECT * FROM users WHERE status = ? AND role != ? LIMIT 10 OFFSET 0
+
+    5. No conditions — just returns the first row in the table
+    
+    $user->first();
+    equal to: 
+    SELECT * FROM users LIMIT 10 OFFSET 0

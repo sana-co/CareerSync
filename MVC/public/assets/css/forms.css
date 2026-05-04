@@ -1,0 +1,237 @@
+.page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12vh;
+}
+
+.container {
+    background: var(--formBlue);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadowHard);
+    text-align: center;
+    width: 45vw;
+    height: auto;
+}
+
+.role-container {
+    /*because role selection box was too long*/
+    background: var(--formBlue);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadowHard);
+    text-align: center;
+    width: 25vw;
+    height: auto;
+}
+
+.login-container {
+    background: var(--formBlue);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadowHard);
+    text-align: center;
+    width: 25vw;
+    height: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid var(--accentBlue);
+    border-radius: 8px;
+    font-size: 14px;
+    width: 60%;
+}
+
+input:focus {
+    border: 1px solid var(--primaryBlue);
+    outline: none;
+}
+
+input:hover {
+    transform: scale(1.02);
+    transition-duration: 0.3s;
+    z-index: 1;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--accentBlue);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+select:focus {
+    border: 1px solid var(--primaryBlue);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primaryBlue);
+    background-image: var(--submit_btn_gradient);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+button a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+button:hover {
+    opacity: 0.7;
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+.links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 17px;
+}
+
+.links a {
+    color: var(--textLight);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: var(--primaryBlue);
+}
+
+.error {
+    color: var(--error);
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.input-field {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.input-field label {
+    align-content: center;
+}
+
+.input-field .eye {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.4rem;
+    width: 1px !important;
+    z-index: 100;
+    background-image: url("../svg_icons/eye_open.svg");
+    background-color: transparent !important;
+    background-size: cover;
+    fill: var(--textDark);
+}
+
+.input-field-login {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.input-field-login label {
+    align-content: center;
+}
+
+.input-field-login .eye {
+    position: absolute;
+    top: 0.85rem;
+    right: 1rem;
+    width: 1px !important;
+    z-index: 100;
+    background-image: url("../svg_icons/eye_open.svg");
+    background-color: transparent !important;
+    background-size: cover;
+    fill: var(--textDark);
+}
+
+.container button {
+    margin: 10px;
+}
+
+/*phone screen optimization*/
+@media (max-width: 600px) {
+    .page-content {
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .container {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .role-container {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .login-container {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .input-field {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .input-field .eye {
+        top: 1.7rem;
+        right: 0.4rem;
+    }
+
+    .input-field-login {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    input,
+    select {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 15px;
+    }
+}

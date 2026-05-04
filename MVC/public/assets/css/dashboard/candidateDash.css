@@ -1,0 +1,527 @@
+.content_section {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollBoxContainer {
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--lightBlue);
+    padding: 20px;
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    overflow-x: auto;
+    box-shadow: var(--shadowHard);
+}
+
+.scrollBoxContainer h1 {
+    padding-bottom: 10px;
+    margin-top: 0px;
+    font-size: 22px;
+}
+
+.contact_counselor_section {
+    width: 40%;
+    height: fit-content;
+    background-color: var(--lightBlue);
+    border-radius: 15px;
+    align-items: justify;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    box-shadow: var(--shadowHard);
+}
+
+.contact_counselor_section label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 10px;
+}
+
+.contact_counselor_section button {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    background-image: var(--green_gradient);
+    height: fit-content;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s ease;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.contact_counselor_section button:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.subscription_section {
+    margin-top: 20px;
+    width: 50%;
+}
+
+.subscriptionBox {
+    padding-bottom: 16px;
+}
+
+.subscription_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.subscription_count {
+    min-width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primaryBlueLight);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: var(--shadowSoft);
+}
+
+.subscriptionScroll {
+    max-height: 320px;
+}
+
+.subscription_list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.subscription_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: var(--white);
+    border: 3px solid var(--accentBlue);
+    transition: 0.2s ease;
+}
+
+.subscription_item:hover {
+    transform: scale(1.01);
+    box-shadow: var(--shadowSoft);
+    z-index: 2;
+}
+
+.subscription-company {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.subscription-logo {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 2px solid var(--lightBlue);
+    flex: 0 0 auto;
+}
+
+.subscription-meta {
+    min-width: 0;
+}
+
+.subscription-meta h3 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    color: var(--textDark);
+}
+
+.subscription-meta p {
+    margin: 0;
+    color: var(--textDark);
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.company_status_tag {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--textDark);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.company_status_tag.pending {
+    background: rgba(240, 173, 78, 0.18);
+}
+
+.company_status_tag.approved {
+    background: rgba(92, 184, 92, 0.18);
+}
+
+.company_status_tag.active {
+    border: 1px solid rgba(46, 107, 231, 0.18);
+}
+
+.company_status_tag.inactive {
+    background: rgba(217, 83, 79, 0.14);
+}
+
+.subscription_form {
+    flex: 0 0 auto;
+    width: auto;
+    display: inline-flex;
+}
+
+.subscribeBtn,
+.unsubscribeBtn {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 18px;
+    width: auto;
+    color: var(--white);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+    min-width: 130px;
+}
+
+.subscribeBtn {
+    background: var(--green_gradient);
+}
+
+.unsubscribeBtn {
+    background: var(--primaryBlueLight);
+}
+
+.subscribeBtn:hover,
+.unsubscribeBtn:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadowSoft);
+}
+
+.scrollBox {
+    max-height: 260px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 6px;
+    background-color: var(--formBlue);
+    border: 0px;
+    padding: 8px;
+}
+
+.scrollBox::-webkit-scrollbar {
+    width: 15px;
+}
+
+.scrollBox::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.scrollBox::-webkit-scrollbar-thumb {
+    background-color: var(--primaryBlueLight);
+    border-radius: 10px;
+    border: 3px solid var(--white);
+}
+
+.scrollBox::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primaryBlue);
+}
+
+.itemsEmpty {
+    background-color: var(--translucentBlue);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: normal;
+}
+
+.applications {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.application_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: solid 3px var(--accentBlue);
+    border-radius: 8px;
+    background-color: var(--white);
+    transition: ease 0.3s;
+}
+
+.application-title {
+    color: #222;
+    font-weight: 600;
+    margin-right: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 150px);
+}
+
+.application_item:hover {
+    transform: scale(1.01);
+    box-shadow: var(--shadowSoft);
+    z-index: 2;
+}
+
+.application_state {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.status {
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status.pending {
+    background: #f0ad4e;
+}
+
+.status.accepted {
+    background: #5cb85c;
+}
+
+.status.rejected {
+    background: #d9534f;
+}
+
+.deleteBtn {
+    background: none;
+    border: none;
+    color: var(--primaryRedLight);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    border-radius: 5px;
+}
+
+.interview-section {
+    width: 50%;
+    background-color: var(--lightBlue);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-shadow: var(--shadowHard);
+    min-height: fit-content;
+}
+
+.interview-scrollbox {
+    padding: 10px 4%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    background-color: var(--formBlue);
+    width: 100%;
+    border-radius: 10px;
+    max-height: 300px;
+}
+
+.interview-scrollbox::-webkit-scrollbar {
+    width: 15px;
+}
+
+.interview-scrollbox::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.interview-scrollbox::-webkit-scrollbar-thumb {
+    background-color: var(--primaryBlueLight);
+    border-radius: 10px;
+    border: 3px solid var(--white);
+}
+
+.interview-scrollbox::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primaryBlue);
+}
+
+.interview-item {
+    width: 100%;
+    background: var(--lightBlue);
+    border: 3px solid var(--accentBlue);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-weight: 600;
+    transition: 0.2s ease;
+    margin-bottom: 16px;
+}
+
+.interview-item:hover {
+    transform: scale(1.01);
+    box-shadow: var(--shadowSoft);
+    z-index: 2;
+}
+
+.interview-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 8px 0;
+    flex-wrap: wrap;
+}
+
+.interview-label {
+    color: var(--textDark);
+    text-transform: lowercase;
+    font-weight: 600;
+}
+
+.interview-value {
+    color: var(--textDark);
+    font-family: "consolas";
+    font-weight: normal;
+}
+
+.interview-cvBtn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: var(--accentBlue);
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.15s ease;
+}
+
+.interview-cvBtn:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadowSoft);
+    background: var(--primaryBlue);
+}
+
+.interview-section h3 {
+    margin-bottom: 10px;
+    color: var(--textDark);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.upcoming_section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .upcoming_section {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .scrollBoxContainer {
+        width: 100%;
+        border-radius: 15px;
+        background-color: var(--lightBlue);
+        padding: 15px 10px 5px 10px;
+        margin: 10px 0;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .content_section {
+        width: 100%;
+    }
+
+    .contact_counselor_section {
+        width: 100%;
+    }
+
+    .contact_counselor_section label {
+        font-size: 1.4rem;
+        font-weight: bold;
+        font-family: "merriweather";
+        padding-bottom: 10px;
+    }
+
+    .subscription_header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .subscription_item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .subscription-company {
+        width: 100%;
+    }
+
+    .subscription_form {
+        width: 100%;
+    }
+
+    .subscribeBtn,
+    .unsubscribeBtn {
+        width: 100%;
+    }
+
+    .interview-section {
+        width: 100%;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .interview-item {
+        width: 100%;
+        padding: 14px 16px;
+    }
+
+    .interview-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .interview-cvBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .interview-section h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,256 @@
+.content_section {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.meeting-requests {
+    background: var(--lightBlue);
+    padding: 20px;
+    border-radius: 12px;
+    width: 50%;
+    box-shadow: var(--shadowHard);
+}
+
+.meeting-requests h1 {
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+}
+
+.scrollBox {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.scrollBox::-webkit-scrollbar {
+    width: 15px;
+}
+
+.scrollBox::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.scrollBox::-webkit-scrollbar-thumb {
+    background-color: var(--primaryBlueLight);
+    border-radius: 10px;
+    border: 3px solid var(--white);
+}
+
+.scrollBox::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primaryBlue);
+}
+
+.request-card {
+    background: var(--white);
+    border: 3px solid var(--accentBlue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    width: 99%;
+}
+
+.candidate_photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accentBlue);
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.candidate-name {
+    flex-grow: 1;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.itemsEmpty {
+    background-color: var(--formBlue);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: normal;
+}
+
+.schedule-btn {
+    background: #0f9738;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    height: 90px;
+    width: fit-content;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.schedule-btn:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadowSoft);
+}
+
+/*for the upcoming interviews display*/
+
+.interview-section {
+    width: 50%;
+    background-color: var(--lightBlue);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-shadow: var(--shadowHard);
+    min-height: 200px;
+}
+
+.interview-scrollbox {
+    padding: 10px 4%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: var(--formBlue);
+    width: 100%;
+    border-radius: 10px;
+    max-height: 500px;
+}
+
+.interview-scrollbox::-webkit-scrollbar {
+    width: 15px;
+}
+
+.interview-scrollbox::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.interview-scrollbox::-webkit-scrollbar-thumb {
+    background-color: var(--primaryBlueLight);
+    border-radius: 10px;
+    border: 3px solid var(--white);
+}
+
+.interview-scrollbox::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primaryBlue);
+}
+
+.interview-item {
+    width: 100%;
+    background: var(--lightBlue);
+    border: 3px solid var(--accentBlue);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-weight: 600;
+    color: var(--textDark);
+    transition: 0.2s ease;
+    margin-bottom: 16px;
+}
+
+.interview-item:hover {
+    transform: scale(1.01);
+    box-shadow: var(--shadowSoft);
+    z-index: 2;
+}
+
+.interview-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 8px 0;
+    flex-wrap: wrap;
+}
+
+.interview-label {
+    color: var(--textDark);
+    text-transform: lowercase;
+    font-weight: 600;
+}
+
+.interview-value {
+    color: var(--textDark);
+    font-family: "consolas";
+    font-weight: normal;
+}
+
+.interview-section h3 {
+    margin-bottom: 10px;
+    color: var(--textDark);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.unverified_message {
+    background-color: rgba(202, 0, 0, 0.247);
+    border: dashed;
+    border-color: rgba(92, 0, 0, 0.651);
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+@media (max-width: 900px) {
+    .meeting-requests {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .request-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .candidate_photo {
+        margin: 0 0 10px 0;
+    }
+
+    .candidate-name {
+        margin-bottom: 10px;
+    }
+
+    .schedule-btn {
+        width: 100%;
+        height: auto;
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+
+    .interview-section {
+        width: 95%;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .interview-item {
+        width: 100%;
+        padding: 14px 16px;
+    }
+
+    .interview-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .interview-cvBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .interview-section h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,62 @@
+/* paymentGateway.css */
+
+.page-content {
+    max-width: 450px;
+    margin: 60px auto 1000px;
+    padding: 40px 30px;
+    background: var(--formBlue);
+    border-radius: 12px;
+    box-shadow: var(--shadowHard);
+    text-align: center;
+}
+
+.page-content h2 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    color: var(--textDark);
+    font-weight: 700;
+}
+
+.page-content p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: var(--textLight);
+}
+
+#payhere-payment {
+    margin-top: 30px;
+    background: var(--primaryBlue);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+#payhere-payment:hover,
+#payhere-payment:focus {
+    background-color: var(--primaryBlueLight);
+    outline: none;
+    box-shadow: var(--shadowSoft);
+}
+
+#payhere-payment:active {
+    background-color: var(--primaryBlue);
+    box-shadow: var(--shadowSoft);
+}
+
+@media (max-width: 480px) {
+    .page-content {
+        margin: 30px 15px;
+        padding: 30px 20px;
+    }
+
+    #payhere-payment {
+        font-size: 1rem;
+        padding: 13px 0;
+    }
+}

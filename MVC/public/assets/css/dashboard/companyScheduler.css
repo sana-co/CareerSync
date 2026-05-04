@@ -1,0 +1,179 @@
+.scheduler_bg {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(7px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 40;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    /*change to none once JS in implemented*/
+}
+
+.scheduler_bg.active {
+    display: flex;
+}
+
+.scheduler_window {
+    width: 30%;
+    max-height: 80%;
+    background: var(--lightBlue);
+    border: 3px solid var(--primaryBlue);
+    border-radius: 15px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    overflow-y: scroll;
+}
+
+.scheduler_window::-webkit-scrollbar {
+    width: 15px;
+}
+
+.scheduler_window::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.scheduler_window::-webkit-scrollbar-thumb {
+    background-color: var(--primaryBlueLight);
+    border-radius: 10px;
+    border: 3px solid var(--white);
+}
+
+.scheduler_window::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primaryBlue);
+}
+
+.scheduler_window h1 {
+    color: var(--textDark);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-field label {
+    font-weight: 600;
+    color: var(--textDark);
+}
+
+/* Inputs, selects, and textareas*/
+input[type="text"],
+input[type="datetime-local"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--accentBlue);
+    background-color: var(--white);
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: 1px solid var(--primaryBlue);
+    outline: none;
+}
+
+/*Slots Container Styling*/
+#slots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.slot-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slot-input input[type="datetime-local"] {
+    flex: 1;
+}
+
+.slot-input .remove-slot {
+    background: var(--primaryRedLight);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.slot-input .remove-slot:hover {
+    background: var(--primaryRed);
+}
+
+/* Add-slot button */
+#add-slot {
+    background: var(--formBlue);
+    border: 1.5px dashed var(--primaryBlue);
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: var(--textLight);
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+#add-slot:hover {
+    background: var(--lightBlue);
+}
+
+.form_btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -2 0px;
+    gap: 10px;
+}
+
+.form_btns button {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 600px) {
+    .scheduler_window {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form_btns {
+        flex-direction: column;
+    }
+
+    .form_btns button {
+        width: 100%;
+    }
+}

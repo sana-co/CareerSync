@@ -1,0 +1,343 @@
+.profile_display {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(7px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 40;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.profile_display.active {
+    display: flex;
+}
+
+.pd_content {
+    width: 50%;
+    max-height: 80vh;
+    background: var(--formBlue);
+    border: solid var(--primaryBlueLight) 3px;
+    display: flex;
+    margin-top: 80px;
+    border-radius: 10px;
+    padding: 50px;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.pd_content::-webkit-scrollbar {
+    width: 15px;
+}
+
+.pd_content::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.pd_content::-webkit-scrollbar-thumb {
+    background-color: var(--primaryBlueLight);
+    border-radius: 10px;
+    border: 3px solid var(--white);
+}
+
+.pd_content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primaryBlue);
+}
+
+.pf_content .h1 {
+    color: var(--textDark);
+    padding: 0px 0px 20px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+}
+
+.user_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.info_segment label {
+    font-weight: bold;
+    color: var(--textDark);
+}
+
+.info_segment .value {
+    color: var(--darkBlue);
+}
+
+.backBtn {
+    background-image: var(--submit_btn_gradient);
+    color: var(--white);
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.backBtn:hover {
+    transform: scale(1.08);
+    z-index: 1;
+}
+
+.profile_picture img {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: solid var(--mid) 5px;
+}
+
+.edit_profileBtn {
+    background-image: var(--submit_btn_gradient);
+    color: var(--white);
+    border: none;
+    width: 170px;
+    height: 55px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin: 20px auto 0 auto;
+    display: block;
+}
+
+.edit_profile_display {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(7px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 40;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.edit_profile_display.active {
+    display: flex;
+}
+
+.editWindow {
+    width: 40%;
+    max-height: 80vh;
+    background: var(--formBlue);
+    border: solid var(--accentBlue) 3px;
+    display: flex;
+    margin-top: 80px;
+    border-radius: 10px;
+    padding: 50px;
+    position: relative;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.editWindow h1 {
+    color: var(--darkpurple);
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+.input-field {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.input-field label {
+    align-content: center;
+}
+
+.input-field img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.input-field .eye {
+    position: absolute;
+    top: 2.5rem;
+    right: 0.8rem;
+    width: 25px !important;
+    height: 25px !important;
+    z-index: 100;
+    background-image: url("../../svg_icons/eye_open.svg");
+    background-color: transparent !important;
+    background-size: cover;
+    fill: black;
+    border: none;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid var(--accentBlue);
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.input-field input:focus {
+    border: 1px solid var(--primaryBlue);
+    outline: none;
+}
+
+.form_btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.form_btns button {
+    width: 100%;
+    height: 55px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background-image: var(--submit_btn_gradient);
+    color: var(--white);
+}
+
+.form_btns button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .pd_content {
+        width: 100%;
+        height: fit-content;
+        background: rgb(221, 235, 255);
+        border: solid var(--mid) 5px;
+        display: flex;
+        margin-top: 0px;
+        border-radius: 10px;
+        padding: 5px;
+        position: relative;
+        flex-direction: column;
+
+        h1 {
+            color: var(--darkpurple);
+            padding: 0px 0px 20px 0px;
+            font-size: 28px;
+        }
+    }
+
+    .profile_picture img {
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+        border: solid var(--mid) 5px;
+    }
+
+    .backBtn {
+        font-size: 20px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: none;
+    }
+
+    .backBtn {
+        color: transparent;
+    }
+
+    .backBtn::before {
+        content: "X";
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 28px;
+    }
+
+    .edit_profileBtn {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin: 20px auto 0 auto;
+        display: block;
+    }
+
+    /* -------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+    .editWindow {
+        overflow-y: auto;
+        width: 90%;
+        height: fit-content;
+        padding: 25px;
+        margin-top: -20px;
+
+        h1 {
+            padding-bottom: 10px;
+            font-size: 25px;
+        }
+    }
+
+    .input-field {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .input-field label {
+        padding-bottom: 3px;
+        padding-left: 5px;
+    }
+
+    .input-field img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: -15px;
+    }
+
+    .input-field .eye {
+        top: 35px;
+        right: 0.8rem;
+        z-index: 100;
+    }
+
+    input {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .form_btns {
+        gap: 10px;
+        flex-direction: column;
+    }
+}
